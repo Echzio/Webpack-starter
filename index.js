@@ -1,11 +1,3 @@
-console.log("Hello world!");
-console.log(__dirname);
-console.log(__filename);
+const counter = require('./array').default;
 
-let = function test(a) {
-    console.log("Ты написал: " + a);
-}
-
-let('привет');
-
-require('./array');
+console.log(counter([1, 2, 3, 4, 5, 6, 7, 8, 9]));
