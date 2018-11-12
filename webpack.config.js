@@ -24,4 +24,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist/js/'),
         publicPath: '../'
     },
+
+    // dev server configuration
+    devServer: {
+        contentBase: './app'
+    },
 }
