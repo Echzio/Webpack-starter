@@ -1,0 +1,11 @@
+{
+  "name": "frontendlearn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Echzio/TrueFrontLearn.git",
+  "author": "Echzio <aleksassincreed@yandex.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.25.1"
+  }
+}
