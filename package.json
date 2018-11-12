@@ -6,7 +6,8 @@
   "author": "Echzio <aleksassincreed@yandex.ru>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch" : "webpack --watch"
   },
   "devDependencies": {
     "webpack": "^4.25.1",
