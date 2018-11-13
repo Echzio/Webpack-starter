@@ -8,11 +8,11 @@
   "scripts": {
     "build": "webpack --mode development",
     "watch": "webpack --watch --mode development",
-    "dev": "webpack-dev-server --open --mode development"
+    "dev": "webpack-dev-server --open --mode development --colors"
   },
   "devDependencies": {
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^last"
+    "webpack-dev-server": "^3.1.10"
   }
 }
