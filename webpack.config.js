@@ -36,25 +36,15 @@ module.exports = {
 
     module: {
         rules: [{
-            test: /\.scss$/,
+            test: /\.(css|sass|scss)$/,
             include: path.resolve(__dirname, '.scss/scss'),
-            use: [{
-                    loader: "css-loader",
-                    options: {
-                        sourceMap: true,
-                        minimize: true,
-                        url: false
-                    }
-                },
-                {
-                    loader: "sass-loader",
-                    options: {
-                        sourceMap: true
-                    }
-                }
-            ]
+            use: ExtractTextPlugin.extract({
+                use: 'css-loader!sass-loader',
+                fallback: 'style-loader'
+            }),
         }]
     },
+
     plugins: [
         new ExtractTextPlugin({
             filename: '../dist/css/style.css',

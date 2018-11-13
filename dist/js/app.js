@@ -117,7 +117,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (1:11)\\nYou may need an appropriate loader to handle this file type.\\n> html, body {\\r\\n|     height: 100%;\\r\\n| }\\r\");\n\n//# sourceURL=webpack:///./scss/style.scss?");
+eval("throw new Error(\"Module parse failed: Unexpected token (1:5)\\nYou may need an appropriate loader to handle this file type.\\n> html {\\r\\n|     height: 100%;\\r\\n| \\r\");\n\n//# sourceURL=webpack:///./scss/style.scss?");
 
 /***/ }),
 
