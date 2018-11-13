@@ -4,7 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 // доп. плагины или модули
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 
 // module settings
 module.exports = {
@@ -15,8 +15,7 @@ module.exports = {
     entry: {
         // основной файл приложения
         app: [
-            './js/app.js',
-            './scss/style.scss'
+            './js/app.js'
         ],
     },
 
@@ -28,27 +27,5 @@ module.exports = {
     },
 
     // dev server configuration
-    devServer: {
-        contentBase: './app',
-        port: 3333,
-        compress: true
-    },
-
-    module: {
-        rules: [{
-            test: /\.(css|sass|scss)$/,
-            include: path.resolve(__dirname, '.scss/scss'),
-            use: ExtractTextPlugin.extract({
-                use: 'css-loader!sass-loader',
-                fallback: 'style-loader'
-            }),
-        }]
-    },
-
-    plugins: [
-        new ExtractTextPlugin({
-            filename: '../dist/css/style.css',
-            allChunks: true,
-        }),
-    ]
+    devServer: {},
 };

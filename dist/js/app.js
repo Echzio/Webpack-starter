@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ \"./js/hello.js\");\n\r\n\r\nObject(_hello__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\nconsole.log('Hello!');\n\n//# sourceURL=webpack:///./js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ \"./js/hello.js\");\n\r\n\r\nObject(_hello__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\nalert('Hello!');\n\n//# sourceURL=webpack:///./js/app.js?");
 
 /***/ }),
 
@@ -110,25 +110,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ "./scss/style.scss":
-/*!*************************!*\
-  !*** ./scss/style.scss ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("throw new Error(\"Module parse failed: Unexpected token (1:5)\\nYou may need an appropriate loader to handle this file type.\\n> html {\\r\\n|     height: 100%;\\r\\n| \\r\");\n\n//# sourceURL=webpack:///./scss/style.scss?");
-
-/***/ }),
-
 /***/ 0:
-/*!*******************************************!*\
-  !*** multi ./js/app.js ./scss/style.scss ***!
-  \*******************************************/
+/*!*************************!*\
+  !*** multi ./js/app.js ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./js/app.js */\"./js/app.js\");\nmodule.exports = __webpack_require__(/*! ./scss/style.scss */\"./scss/style.scss\");\n\n\n//# sourceURL=webpack:///multi_./js/app.js_./scss/style.scss?");
+eval("module.exports = __webpack_require__(/*! ./js/app.js */\"./js/app.js\");\n\n\n//# sourceURL=webpack:///multi_./js/app.js?");
 
 /***/ })
 
