@@ -1,0 +1,8 @@
+html body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  html body div {
+    color: red;
+    width: 100%; }
+

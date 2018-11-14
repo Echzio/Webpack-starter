@@ -1,0 +1,13 @@
+html {
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        div {
+            color: red;
+            width: 100%;
+        }
+    }
+}

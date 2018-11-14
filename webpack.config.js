@@ -1,9 +1,12 @@
 //для путей
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const conf = {
+module.exports = {
     // вход
-    entry: './src/index.js',
+    entry: {
+        main: './src/index.js'
+    },
     // выход
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -14,8 +17,24 @@ const conf = {
     devServer: {
         // для показа ошибки вне консоли
         overlay: true,
-    }
-};
-
-// экспорт
-module.exports = conf;
+    },
+    module: {
+        rules: [{
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
+            {
+                test: /\.scss$/,
+                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            }
+        ]
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: 'style.css',
+        })
+    ]
+}
