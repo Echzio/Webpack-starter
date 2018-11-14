@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack --mode development",
     "watch": "webpack --watch --mode development",
-    "dev": "webpack-dev-server --open --mode development --colors"
+    "dev": "webpack-dev-server --open --mode development"
   },
   "devDependencies": {
     "webpack": "^4.25.1",
