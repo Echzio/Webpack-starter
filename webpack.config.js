@@ -1,33 +1,17 @@
-// // basic vars
-// // операция с путями
-// const path = require('path');
-// const webpack = require('webpack');
+//для путей
+const path = require('path');
 
-// // доп. плагины или модули
+const conf = {
+    // вход
+    entry: './src/index.js',
+    // выход
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        filename: 'awesome.js',
+        // относительная ссылка на итоговый файл
+        publicPath: 'dist/',
+    }
+};
 
-
-// // module settings
-// module.exports = {
-//     // базовый путь к проекту
-//     context: path.resolve(__dirname, 'src'),
-
-//     // настройка точек входа в js
-//     entry: {
-//         // основной файл приложения
-//         app: [
-//             './js/app.js'
-//         ],
-//     },
-
-//     // путь для собранных файлов
-//     output: {
-//         filename: 'app.js',
-//         path: path.resolve(__dirname, 'dist/js/'),
-//         publicPath: '../'
-//     },
-
-//     // dev server configuration
-//     devServer: {
-        
-//     },
-// };
+// экспорт
+module.exports = conf;
