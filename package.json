@@ -1,8 +1,8 @@
 {
-  "name": "frontendlearn",
+  "name": "webpackstarter",
   "version": "1.0.0",
   "main": "src/js/app.js",
-  "repository": "https://github.com/Echzio/TrueFrontLearn.git",
+  "repository": "https://github.com/Echzio/Webpack-starter.git",
   "author": "Echzio <aleksassincreed@yandex.ru>",
   "license": "MIT",
   "scripts": {
