@@ -10,6 +10,10 @@ const conf = {
         filename: 'awesome.js',
         // относительная ссылка на итоговый файл
         publicPath: 'dist/',
+    },
+    devServer: {
+        // для показа ошибки вне консоли
+        overlay: true,
     }
 };
 
