@@ -5,14 +5,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     // вход
     entry: {
-        main: './src/index.js'
+        main: './src/js/index.js'
     },
     // выход
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, './dist/js/'),
         filename: 'awesome.js',
         // относительная ссылка на итоговый файл
-        publicPath: 'dist/',
+        publicPath: 'dist/js/',
     },
     devServer: {
         // для показа ошибки вне консоли
@@ -34,7 +34,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style.css',
+            filename: '../css/style.css',
         })
     ]
 }
