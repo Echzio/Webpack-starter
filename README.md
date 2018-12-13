@@ -5,7 +5,7 @@
 - Последнию версию [Node](https://nodejs.org/en/)
 - Последнию версию [Yarn](https://yarnpkg.com/lang/en/)
 
-Базовая настройка [webpack 4](https://webpack.js.org/) для bundle .scss/.js с транспилляцией кода через [babel](https://babeljs.io/). Для актуальности, вместо [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin) был использован модуль [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin).
+Базовая настройка [webpack 4](https://webpack.js.org/) для bundle .scss/.js с транспилляцией кода через [babel](https://babeljs.io/). Для актуальности, вместо [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin) был использован модуль [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin), так же был добавлен [autoprefixer](https://github.com/postcss/autoprefixer)
 
 Команды запуска:
 
