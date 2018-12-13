@@ -1,13 +1,15 @@
+$red: red;
 html {
-
     body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
 
         div {
-            color: red;
+            color: $red;
             width: 100%;
+            box-shadow: 0 0 0 $red;
+            transition: .3s ease-in-out;
         }
     }
 }
