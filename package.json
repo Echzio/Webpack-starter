@@ -6,10 +6,10 @@
   "author": "Echzio <aleksassincreed@yandex.ru>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode development",
-    "watch": "webpack --watch --mode development",
-    "dev": "webpack-dev-server --open --mode development",
-    "prod": "webpack --mode production"
+    "build": "webpack --mode=development",
+    "watch": "webpack --watch --mode=development",
+    "dev": "webpack-dev-server --open --mode=development --hot --progress",
+    "prod": "webpack --mode=production"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
