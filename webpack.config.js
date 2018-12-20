@@ -5,9 +5,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
     // вход
-    entry: {
-        main: './src/index.js'
-    },
+    entry: ['@babel/polyfill', './src/index.js'],
     // выход
     output: {
         path: path.resolve(__dirname, './dist/js/'),
@@ -20,7 +18,8 @@ module.exports = {
         overlay: true,
     },
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
