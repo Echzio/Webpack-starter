@@ -32,7 +32,7 @@ yarn build
 ```sh
 yarn prod
 ```
-- Запуск watch, кому это по приколу
+- Запуск watch
 ```sh
 yarn watch
 ```
