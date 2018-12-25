@@ -1,7 +1,7 @@
 let ready = () => { let app;
     
     app = document.getElementById('app');
-    app.innerHTML = 'Hello Worldssss';
+    app.innerHTML = 'Hello World';
 }
 
 document.addEventListener('DOMContentLoaded', ready);

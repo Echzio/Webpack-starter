@@ -1,4 +1,4 @@
-$red: rgba(182, 93, 93, 0.438);
+$black: #000;
 
 html {
     body {
@@ -6,9 +6,9 @@ html {
         justify-content: center;
 
         div {
-            color: $red;
+            color: $black;
             width: 100%;
-            box-shadow: 0 0 0 $red;
+            box-shadow: 0 0 0 $black;
             transition: .3s ease-in-out;
         }
     }

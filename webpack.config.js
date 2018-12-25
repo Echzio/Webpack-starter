@@ -1,6 +1,6 @@
 //для путей
 const path = require('path');
-//const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 
@@ -12,7 +12,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'awesome.js',
         // относительная ссылка на итоговый файл
-        publicPath: '/dist/',
+        publicPath: '',
     },
     devServer: {
         // для показа ошибки вне консоли
@@ -60,7 +60,10 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: './css/style.css',
+            filename: 'css/style.css',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
         })
     ]
 }
