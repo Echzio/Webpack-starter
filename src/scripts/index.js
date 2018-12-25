@@ -1,7 +1,7 @@
-let ready = () => { let title;
-
-    title = document.querySelector('.title');
-    title.innerHTML = 'Webpack Application';
+let ready = () => { let app;
+    
+    app = document.getElementById('app');
+    app.innerHTML = 'Hello World';
 }
 
 document.addEventListener('DOMContentLoaded', ready);

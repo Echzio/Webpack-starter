@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack --mode=development",
     "watch": "webpack --watch --mode=development",
-    "dev": "webpack-dev-server --open --mode=development --hot --progress",
+    "dev": "webpack-dev-server --open --mode=development --hot",
     "prod": "webpack --mode=production"
   },
   "devDependencies": {

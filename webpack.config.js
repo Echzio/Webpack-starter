@@ -1,5 +1,6 @@
 //для путей
 const path = require('path');
+//const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 
@@ -8,18 +9,20 @@ module.exports = {
     entry: ['@babel/polyfill', './src/index.js'],
     // выход
     output: {
-        path: path.resolve(__dirname, './dist/js/'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'awesome.js',
         // относительная ссылка на итоговый файл
-        publicPath: 'dist/js/',
+        publicPath: '/dist/',
     },
     devServer: {
         // для показа ошибки вне консоли
         overlay: true,
+        hot: true,
+        contentBase: path.join(__dirname, "dist"),
+        port: 9000
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
@@ -58,7 +61,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '../css/style.css',
+            filename: './css/style.css',
         })
     ]
 }
