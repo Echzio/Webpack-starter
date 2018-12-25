@@ -17,8 +17,7 @@ module.exports = {
     devServer: {
         // для показа ошибки вне консоли
         overlay: true,
-        hot: true,
-        contentBase: path.join(__dirname, "dist"),
+        hot: true,       
         port: 9000
     },
     module: {
