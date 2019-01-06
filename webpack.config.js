@@ -17,7 +17,7 @@ module.exports = {
     devServer: {
         // для показа ошибки вне консоли
         overlay: true,
-        hot: true,       
+        hot: true,
         port: 9000
     },
     module: {
@@ -55,6 +55,10 @@ module.exports = {
                         sourceMap: true
                     }
                 }]
+            },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader'
             }
         ]
     },
