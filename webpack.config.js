@@ -70,6 +70,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
