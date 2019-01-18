@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
+const webpack = require('webpack';)
 
 module.exports = {
     // вход
@@ -68,6 +69,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        webpack.HotModuleReplacementPlugin()
     ]
 }

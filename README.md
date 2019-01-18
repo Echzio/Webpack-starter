@@ -5,7 +5,8 @@
 - Последнию версию [Node](https://nodejs.org/en/)
 - Последнию версию [Yarn](https://yarnpkg.com/lang/en/)
 
-Базовая настройка [webpack 4](https://webpack.js.org/) для bundle .scss/.js с транспилляцией кода через [babel](https://babeljs.io/). Для актуальности, вместо [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin) был использован модуль [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin), так же был добавлен [autoprefixer](https://github.com/postcss/autoprefixer)
+Базовая настройка [Webpack 4](https://webpack.js.org/) для bundle .scss/.js с транспилляцией кода через [Babel](https://babeljs.io/). Для актуальности, вместо [Extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin) был использован модуль [Mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin), так же был добавлен [Autoprefixer](https://github.com/postcss/autoprefixer),
+ [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin)
 
 Команды запуска:
 
@@ -21,18 +22,18 @@ yarn
 yarn dev
 ```
 
-- Запуск билдинга
+- Билдинг
 
 ```sh
 yarn build
 ```
 
-- Запуск минимизации
+- Production
 
 ```sh
 yarn prod
 ```
-- Запуск watch
+- Watch
 ```sh
 yarn watch
 ```
