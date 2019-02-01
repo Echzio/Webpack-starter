@@ -39,15 +39,11 @@ module.exports = {
                     {
                         loader: 'style-loader',
                     }, {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-
-                        }
+                        loader: MiniCssExtractPlugin.loader,                      
                     }, {
                         loader: 'css-loader',
                         options: {
-                            sourceMap: true,
-                            modules: true,
+                            sourceMap: true,                            
                         }
                     }, {
                         loader: 'postcss-loader',
