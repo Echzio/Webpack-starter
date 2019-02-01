@@ -1,2 +1,14 @@
 $black: #000;
 
+html {
+    body {
+        flex-wrap: wrap;
+        justify-content: center;
+        div {
+            color: $black;
+            width: 100%;
+            box-shadow: 0 0 0 $black;
+            transition: .3s ease-in-out;
+        }
+    }
+}

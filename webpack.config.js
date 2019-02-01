@@ -7,9 +7,6 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         main: ['@babel/polyfill', './src/index.js'],
-        style: './src/scss/style.scss',
-        style2: './src/scss/style-two.scss',
-        style3: './src/scss/style-three.scss',
     },
 
     output: {
