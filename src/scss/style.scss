@@ -1,14 +1,13 @@
-$black: #000;
-
 html {
-    body {
-        flex-wrap: wrap;
-        justify-content: center;
-        div {
-            color: $black;
-            width: 100%;
-            box-shadow: 0 0 0 $black;
-            transition: .3s ease-in-out;
-        }
+  body {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    div {
+      color: #000;
+      width: 100%;
+      box-shadow: 0 0 0 #000;
+      transition: 0.3s ease-in-out;
     }
+  }
 }
