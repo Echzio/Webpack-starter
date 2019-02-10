@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
-const prefixer = require('postcss-prefix-selector');
+//const prefixer = require('postcss-prefix-selector');
 const webpack = require('webpack');
 
 module.exports = {
@@ -47,9 +47,9 @@ module.exports = {
                         loader: 'postcss-loader',
                         options: {
                             plugins: [
-                                prefixer({
-                                    prefix: '#webpack-app'
-                                }),                           
+                                // prefixer({
+                                //     prefix: '#webpack-app'
+                                // }),                           
                                 postcssPresetEnv({
                                     state: 0,
                                     browsers: ['>1%'],
