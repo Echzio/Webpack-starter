@@ -1,7 +1,7 @@
 {
   "name": "webpackstarter",
   "version": "1.0.0",
-  "main": "src/js/app.js",
+  "main": "./src/index.js",
   "repository": "https://github.com/Echzio/Webpack-starter.git",
   "author": "Echzio <aleksassincreed@yandex.ru>",
   "license": "MIT",
