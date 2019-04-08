@@ -54,7 +54,7 @@ module.exports = {
                 // }),
                 postcssPresetEnv({
                   state: 0,
-                  browsers: ['>1%'],
+                  browsers: ['last 4 version'],
                   autoprefixer: {
                     grid: true,
                   },
@@ -75,14 +75,26 @@ module.exports = {
         test: /\.(png|jpg)$/,
         loader: 'url-loader',
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg|otf)$/,
+        use: ['file-loader?name=fonts/[name].[ext]']
+      },
+      {
+        test: /\.(html)$/,
+        loader: 'html-loader',
+      }
     ],
   },
   optimization: {
-    minimizer: [new TerserPlugin()],
+    minimizer: [new TerserPlugin({
+    cache: true,
+    parallel: true,
+    }
+  )],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
