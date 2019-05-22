@@ -86,11 +86,22 @@ module.exports = {
     ],
   },
   optimization: {
-    minimizer: [new TerserPlugin({
-    cache: true,
-    parallel: true,
+    minimizer: [
+      new TerserPlugin({
+        cache: true,
+        parallel: true,
+      }),
+    ],
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
     }
-  )],
   },
   plugins: [
     new MiniCssExtractPlugin({
