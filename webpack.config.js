@@ -2,18 +2,17 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
-//const prefixer = require('postcss-prefix-selector');
 const webpack = require('webpack');
+const webpackBar = require('webpackbar');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
     main: ['@babel/polyfill', './src/index.js'],
   },
-
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
     publicPath: '',
   },
   devServer: {
@@ -33,12 +32,8 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
+          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -49,9 +44,6 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               plugins: [
-                // prefixer({
-                //     prefix: '#webpack-app'
-                // }),
                 postcssPresetEnv({
                   state: 0,
                   autoprefixer: {
@@ -76,12 +68,12 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg|otf)$/,
-        use: ['file-loader?name=fonts/[name].[ext]']
+        use: ['file-loader?name=fonts/[name].[ext]'],
       },
       {
         test: /\.(html)$/,
         loader: 'html-loader',
-      }
+      },
     ],
   },
   optimization: {
@@ -97,10 +89,10 @@ module.exports = {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all'
-        }
-      }
-    }
+          chunks: 'all',
+        },
+      },
+    },
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -110,5 +102,6 @@ module.exports = {
       template: './src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new webpackBar(),
   ],
 };
