@@ -20,6 +20,7 @@ module.exports = {
     hot: true,
     port: 9000,
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -102,6 +103,6 @@ module.exports = {
       template: './src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpackBar(),
+    new webpackBar({color: 'blue'}),
   ],
 };
