@@ -72,8 +72,15 @@ module.exports = {
         use: ['file-loader?name=fonts/[name].[ext]'],
       },
       {
+        test: /\.(ico)$/,
+        use: ['file-loader?name=images/[name].[ext]'],
+      },
+      {
         test: /\.(html)$/,
         loader: 'html-loader',
+        query: {
+          interpolate: 'require',
+        },
       },
     ],
   },
