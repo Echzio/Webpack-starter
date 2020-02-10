@@ -102,6 +102,11 @@ module.exports = {
       },
     },
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -110,6 +115,6 @@ module.exports = {
       template: './src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpackBar({color: 'blue'}),
+    new webpackBar({ color: 'blue' }),
   ],
 };
