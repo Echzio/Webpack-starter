@@ -13,14 +13,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: '',
+    publicPath: '/',
   },
+  devtool: argv.mode === 'development' ? 'source-map' : false,
   devServer: {
     overlay: true,
     hot: true,
     port: 9000,
   },
-  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -93,6 +93,8 @@ module.exports = {
     ],
     splitChunks: {
       chunks: 'all',
+      minSize: 10000,
+      maxSize: 250000,
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
