@@ -5,15 +5,16 @@ const postcssPresetEnv = require('postcss-preset-env');
 const webpack = require('webpack');
 const webpackBar = require('webpackbar');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
-module.exports = {
+module.exports = (env, argv) => ({
   entry: {
     main: ['@babel/polyfill', './src/index.js'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: '/',
+    publicPath: '',
   },
   devtool: argv.mode === 'development' ? 'source-map' : false,
   devServer: {
@@ -33,8 +34,7 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          'style-loader',
-          MiniCssExtractPlugin.loader,
+          argv.mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -64,23 +64,20 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader',
+        test: /\.(png|jpg|gif|webp)$/,
+        loader: ['url-loader'],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg|otf)$/,
-        use: ['file-loader?name=fonts/[name].[ext]'],
+        test: /\.(woff(2)?|ttf|eot||otf)$/,
+        use: ['file-loader?name=./assets/fonts/[name].[ext]'],
       },
       {
-        test: /\.(ico)$/,
-        use: ['file-loader?name=images/[name].[ext]'],
+        test: /\.(svg)$/,
+        use: ['file-loader?name=./assets/images/[name].[ext]'],
       },
       {
         test: /\.(html)$/,
         loader: 'html-loader',
-        query: {
-          interpolate: 'require',
-        },
       },
     ],
   },
@@ -89,6 +86,7 @@ module.exports = {
       new TerserPlugin({
         cache: true,
         parallel: true,
+        extractComments: false,
       }),
     ],
     splitChunks: {
@@ -107,16 +105,18 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      public: path.resolve(__dirname, 'public'),
     },
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: './assets/styles/[name].css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpackBar({ color: 'blue' }),
+    new CopyPlugin([{ from: 'public/assets', to: 'assets' }]),
   ],
-};
+});

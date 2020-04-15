@@ -1,2 +1,3 @@
-import '@/scss/style.scss';
-import '@/index.html';
+import '@/js/logger';
+import '@/styles/global.scss';
+import 'public/index.html';
